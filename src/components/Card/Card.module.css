@@ -1,0 +1,88 @@
+.contenedor {
+    width: 12em;
+    box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.75);
+    padding: 10px;
+    margin: 5px;
+    background-image: url("../assets/cardBg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+}
+
+.titulo{
+    border: 1px solid black;
+    padding-left: 10px;
+    background-color: #F7F352;
+    height: 2em;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor h1{
+    /* font-family:'Courier New', Courier, monospace ; */
+    font-size: 85%;
+    color: black;
+}
+
+.buttonClose {
+    size: 1em;
+    background-color: brown;
+    color: azure;
+    border: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius:20px;
+    padding-bottom: 1px;
+    transition: 0.2s;
+}
+
+.buttonClose:hover {
+    box-shadow: -3px -2px 172px 16px rgba(0,0,0,0.47) inset;
+-webkit-box-shadow: -3px -2px 172px 16px rgba(0,0,0,0.47) inset;
+-moz-box-shadow: -3px -2px 172px 16px rgba(0,0,0,0.47) inset;
+}
+
+
+.contenedor img{
+    border: 1px solid black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    margin-bottom: 0%;
+    
+}
+
+.text{
+    border:  1px solid black;
+    display: flex;
+    height: 2em;
+    width: 100%;
+    background-color: #F7F352;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.contenedor h2{
+    padding-left: 10px;
+    padding-right: 10px;
+    /* font-family:'Courier New', Courier, monospace ; */
+    font-size:small;
+    color: black;
+}
+
+.corazon{
+    background-color: #F7F352;
+    border-radius: 100%;
+    font-size: larger;
+    border: 0px;
+}

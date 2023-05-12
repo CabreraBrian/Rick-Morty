@@ -1,0 +1,9 @@
+.contenedor {
+    border-radius: 30px;
+    margin: 50px;
+    justify-content: center;
+    align-content: center;
+    border: 5px solid;
+    padding: 15px;
+    background-color: rgba(106, 255, 0, 0.794);
+}

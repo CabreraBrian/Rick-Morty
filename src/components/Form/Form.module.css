@@ -1,0 +1,27 @@
+.contenedor{
+    border-radius: 15px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(71, 71, 71);
+}
+
+.contenedor img{
+    width: 30em;
+}
+
+.input{
+    font-size: 2em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.boton{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+}
