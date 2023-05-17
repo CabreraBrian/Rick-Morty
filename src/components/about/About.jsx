@@ -1,8 +1,10 @@
 import style from './About.module.css'
 import yo from "../assets/yo.png.jpg";
+import Cont from "./Cont"
 
 const About = () => {
   return (
+    
     <div className={style.about}> 
      <h1>Aplicacion creada por Brian Ezequiel Cabrera</h1>
      <h2>Creada en el modulo 2 del bootCamp de Henry</h2>
@@ -22,6 +24,7 @@ const About = () => {
         <h1>hola yo estoy bien</h1>
       </li>
      </ul>
+     <Cont></Cont>
     </div>
     )
 }

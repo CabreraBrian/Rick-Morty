@@ -7,55 +7,55 @@ import { useState } from "react";
 const Favorites = ({ myFavorites }) => {
   const [aux, setAux] = useState(false);
 
-
   const dispatch = useDispatch();
-  
-  const handleOrder = (event) =>{
-      dispatch(orderCards(event.target.value));
-      setAux(!aux);
-  };  
 
-  const handleFilter = (event) =>{
-      dispatch(filterCards(event.target.value))
+  const handleOrder = (event) => {
+    dispatch(orderCards(event.target.value));
+    setAux(!aux);
   };
 
+  const handleFilter = (event) => {
+    dispatch(filterCards(event.target.value));
+  };
 
-return (
-  <div className={style.contenedor}>
-      <select onChange={handleOrder}>
+  return (
+    <div>
+
+      <div className={style.filtros}>
+        <select className= {style.filtroL} onChange={handleOrder}>
           <option value="A">Ascendente</option>
           <option value="D">Descendente</option>
-      </select>
+        </select>
 
-      <select onChange={handleFilter}>
+        <select className= {style.filtroR} onChange={handleFilter}>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           <option value="Genderless">Genderless</option>
           <option value="unknown">unknown</option>
-          <option value="Male, Female, Gengerless, unknown" >todos</option>
-      </select>
+        </select>
+      </div>
 
-
-
-    {myFavorites?.map(
-      ({ id, name, status, species, gender, origin, image, onClose }) => {
-        return (
-          <Card
-            key={id}
-            id={id}
-            name={name}
-            status={status}
-            species={species}
-            gender={gender}
-            origin={origin}
-            image={image}
-            onClose={onClose}
-          />
-        );
-      }
-    )}
-  </div>
-);
+      <div className={style.contenedor}>
+        {myFavorites?.map(
+          ({ id, name, status, species, gender, origin, image, onClose }) => {
+            return (
+              <Card
+                key={id}
+                id={id}
+                name={name}
+                status={status}
+                species={species}
+                gender={gender}
+                origin={origin}
+                image={image}
+                onClose={onClose}
+              />
+            );
+          }
+        )}
+      </div>
+    </div>
+  );
 };
 
 const mapStateToProps = (state) => {

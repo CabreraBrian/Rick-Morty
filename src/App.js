@@ -1,12 +1,12 @@
-import Cards from './components/Cards/Cards.jsx';
-import NavBar from './components/NavBar/NavBar.jsx';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom"
-import About from './components/about/About.jsx';
-import Detail from './components/Detail/Detail.jsx';
-import Forms from "./components/Form/Form.jsx";
+import { useState, useEffect } from 'react';
 import Favorites from "./components/Favorites/Favorites.jsx";
+import NavBar from './components/NavBar/NavBar.jsx';
+import Detail from './components/Detail/Detail.jsx';
+import Cards from './components/Cards/Cards.jsx';
+import About from './components/about/About.jsx';
+import Forms from "./components/Form/Form.jsx";
+import axios from 'axios';
 const EMAIL = 'cabrerabriantbj@gmail.com';
 const PASSWORD = 'asd123';
 
@@ -32,7 +32,7 @@ function App() {
 
 
    function onSearch(id) {
-      axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+      axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
          if (data.id) {
             setCharacters((oldChars) => [...oldChars, data]);
          } else {
