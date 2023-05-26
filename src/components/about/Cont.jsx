@@ -32,4 +32,4 @@ const ContadorFuncional = () => {
   );
 };
 
-export default ContadorFuncional
+export {ContadorFuncional};

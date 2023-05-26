@@ -1,6 +1,6 @@
 import style from './About.module.css'
 import yo from "../assets/yo.png.jpg";
-import Cont from "./Cont"
+import {ContadorFuncional} from "./Cont"
 
 const About = () => {
   return (
@@ -24,7 +24,7 @@ const About = () => {
         <h1>hola yo estoy bien</h1>
       </li>
      </ul>
-     <Cont></Cont>
+     <ContadorFuncional/>
     </div>
     )
 }
