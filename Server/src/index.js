@@ -5,7 +5,7 @@ const morgan = require("morgan");
 const {router} = require("./Routes/index");
 
 server.use(express.json());
-server.use(morgan("dev"))
+server.use(morgan("common"))
 
 server.use((req, res, next) => {
    res.header('Access-Control-Allow-Origin', '*');

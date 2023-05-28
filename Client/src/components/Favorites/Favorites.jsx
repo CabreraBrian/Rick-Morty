@@ -11,7 +11,7 @@ const Favorites = ({ myFavorites }) => {
 
   const handleOrder = (event) => {
     dispatch(orderCards(event.target.value));
-    setAux(!aux);
+    setAux(true);
   };
 
   const handleFilter = (event) => {
@@ -20,7 +20,6 @@ const Favorites = ({ myFavorites }) => {
 
   return (
     <div>
-
       <div className={style.filtros}>
         <select className= {style.filtroL} onChange={handleOrder}>
           <option value="A">Ascendente</option>
@@ -28,6 +27,7 @@ const Favorites = ({ myFavorites }) => {
         </select>
 
         <select className= {style.filtroR} onChange={handleFilter}>
+          <option value="allCharacters">All Characters</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           <option value="Genderless">Genderless</option>

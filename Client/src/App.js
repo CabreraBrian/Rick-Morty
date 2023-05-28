@@ -1,40 +1,49 @@
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Favorites from "./components/Favorites/Favorites.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Cards from "./components/Cards/Cards.jsx";
 import About from "./components/about/About.jsx";
 import Forms from "./components/Form/Form.jsx";
 import axios from "axios";
+import Favorites from "./components/Favorites/Favorites.jsx";
 
 function App() {
   const [characters, setCharacters] = useState([]);
   const { pathname } = useLocation();
+
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
 
-  function login(userData) {
-    const { email, password } = userData;
-    const URL = "http://localhost:3001/rickandmorty/login/";
-    axios(URL + `?email=${email}&password=${password}`)
-    .then(({ data }) => {
+  async function login(userData) {
+    try {
+      const { email, password } = userData;
+      const URL = "http://localhost:3001/rickandmorty/login/";
+      const { data } = await axios(URL + `?email=${email}&password=${password}`);
+
       const { access } = data;
       setAccess(access);
       access && navigate("/home");
-    });
+    } catch (error) {
+      console.log(error.message);
+    }
   }
 
   useEffect(() => {
     !access && navigate("/");
   }, [access]);
 
-  function onSearch(id) {
-    axios(`http://localhost:3001/rickandmorty/character/${id}`)
-    .then(({ data }) => {
-      if (data.id) { setCharacters((oldChars) => [...oldChars, data]);
-      } else { window.alert("¡No hay personajes con este ID!"); }
-    });
+  async function onSearch(id) {
+    try {
+      const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`);
+      if (data.name) {
+        setCharacters((oldChars) => [...oldChars, data])
+      } else {
+        window.alert("¡No hay personajes con este ID!"); 
+      }
+      } catch (error) {
+        console.log(error);
+      }
   }
 
   const onClose = (id) => {
