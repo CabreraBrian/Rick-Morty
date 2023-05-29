@@ -1,0 +1,18 @@
+    case FILTER:
+      const
+      return {
+        ...state,
+        charactersOrder: payload === "allCharacters" ? [...state.allCharactersFav] : state.allCharactersFav.filter( character => character.gender === payload),
+        myFavorites: [...state.charactersOrder],
+      };
+
+    case ORDER:
+      const allCharactersFavCopy = [...state.charactersOrder];
+      return {
+        ...state,
+        myFavorites:
+          payload === "A" ? allCharactersFavCopy.sort((a, b) => a.id - b.id) : allCharactersFavCopy.sort((a, b) => b.id - a.id)
+      };
+
+    default:
+      return { ...state };

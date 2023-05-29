@@ -22,23 +22,18 @@ const reducer = (state = initialState, {type, payload}) => {
       };
 
     case FILTER:
-      const allCharactersFiltered = state.allCharactersFav.filter( character => character.gender === payload);
+      const allCharacctersFiltered = state.allCharactersFav.filter( character => character.gender === payload);
       return {
         ...state,
-        myFavorites: 
-          payload === "allCharacters"
-          ? [...state.allCharactersFav]
-          : allCharactersFiltered,
+        myFavorites: payload === "allCharacters" ? [...state.allCharactersFav] : allCharacctersFiltered,
       };
 
     case ORDER:
-      const allCharactersFavCopy = [...state.allCharactersFav];
+      const myFavoritesCopy = [...state.myFavorites];
       return {
         ...state,
         myFavorites:
-          payload === "A"
-          ? allCharactersFavCopy.sort((a, b) => a.id - b.id)
-          : allCharactersFavCopy.sort((a, b) => b.id - a.id)
+          payload === "A" ? myFavoritesCopy.sort((a, b) => a.id - b.id) : myFavoritesCopy.sort((a, b) => b.id - a.id)
       };
 
     default:
