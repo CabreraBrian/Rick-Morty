@@ -1,10 +1,14 @@
 .about{
+    margin: 2%;
     border: 5px solid rgb(234, 255, 0);
     font-size: large;
     height: 90%;
     border-radius: 15px;
-    padding: 10px;
-    background-color: rgba(0, 255, 60, 0.535);
+    background: url("../assets/fondoAbout.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
 }
 
 

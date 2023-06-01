@@ -25,6 +25,4 @@ const getCharacterById = async (req, res) => {
   }
 };
 
-module.exports = { 
-  getCharacterById 
-};
+module.exports = {getCharacterById};

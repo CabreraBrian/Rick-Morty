@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("./components/assets/fondo2.jpg") ;
+  background: url("./components/assets/fondo.jpg") ;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

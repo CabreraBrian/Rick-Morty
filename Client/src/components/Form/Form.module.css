@@ -1,7 +1,7 @@
 
 .contenedor{
     height: 100vh;
-    background: url("../assets/fondo.png");
+    background: url("../assets/fondoForm.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
