@@ -39,7 +39,7 @@ const Card = ({id, name, status, species, gender, origin, image, onClose, addFav
          <div className={style.text}>
             <h2> {species}</h2>
             {(<button className={style.corazon} onClick={handleFavorite}>{isFav ? '❤️' : '🤍'}</button>) }
-            <h2> {gender}</h2>
+            <h2> {status}</h2>
          </div>
 
       </div>

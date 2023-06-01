@@ -1,9 +1,39 @@
-.contenedor {
-    border-radius: 30px;
-    margin: 50px;
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 93.6vh;
+}
+
+.imagen img{
+    width: 70%;
+    border-radius: 100%;
+}
+
+.imagen{
+    display: flex;
     justify-content: center;
-    align-content: center;
-    border: 5px solid;
-    padding: 15px;
-    background-color: rgba(106, 255, 0, 0.794);
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.223);
+}
+.datos {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    font-size: 100%;
+    background-color: rgba(0, 255, 30, 0.382);
+    color: white;
+}
+
+.datos h2{
+    font-size: 50px;
+}
+
+.datos h3{
+    font-size: 25px;
 }

@@ -21,13 +21,14 @@ const Favorites = ({ myFavorites }) => {
   return (
     <div>
       <div className={style.filtros}>
+        <h1 className={style.etiqueta}>Orden:</h1>
         <select className= {style.filtroL} onChange={handleOrder}>
           <option value="A">Ascendente</option>
           <option value="D">Descendente</option>
         </select>
-
+        <h1 className={style.etiqueta}>Genero:</h1>
         <select className= {style.filtroR} onChange={handleFilter}>
-          <option value="allCharacters">All Characters</option>
+          <option value="allCharacters">Todos los generos</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           <option value="Genderless">Genderless</option>

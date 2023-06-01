@@ -1,5 +1,5 @@
 .nav {
-  height: fit-content;
+  height: 6vh;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 2px;
@@ -13,7 +13,7 @@
 
 .nav img {
   left: 1px;
-  width: 10em;
+  height: 90%;
 }
 
 .botonH {
@@ -25,6 +25,11 @@
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
+.botonH:hover {
+  box-shadow: -3px -2px 172px 16px rgba(0,0,0,0.47) inset;
+-webkit-box-shadow: -3px -2px 172px 16px rgba(0,0,0,0.47) inset;
+-moz-box-shadow: -3px -2px 172px 16px rgba(0,0,0,0.47) inset;
+}
 
 .botonA {
   border: 2px solid;
@@ -32,6 +37,11 @@
   /* font-family:'Courier New', Courier, monospace; */
   font-weight: 900;
   background-color: rgb(43, 255, 0);
+}
+.botonA:hover {
+  box-shadow: -3px -2px 172px 16px rgba(0,0,0,0.47) inset;
+-webkit-box-shadow: -3px -2px 172px 16px rgba(0,0,0,0.47) inset;
+-moz-box-shadow: -3px -2px 172px 16px rgba(0,0,0,0.47) inset;
 }
 
 .botonF {
@@ -43,6 +53,11 @@
   background-color: rgb(43, 255, 0);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+.botonF:hover {
+  box-shadow: -3px -2px 172px 16px rgba(0,0,0,0.47) inset;
+-webkit-box-shadow: -3px -2px 172px 16px rgba(0,0,0,0.47) inset;
+-moz-box-shadow: -3px -2px 172px 16px rgba(0,0,0,0.47) inset;
 }
 
 .botones {

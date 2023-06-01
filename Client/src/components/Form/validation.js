@@ -2,7 +2,7 @@ const data = (data) => {
     let  errors = {};
 
     if(!data.email.includes('@')){
-        errors.e1 = 'Email is not valid';
+        errors.e1 = 'Email no valido';
     }
     if(!data.email){
         errors.e2 = 'Ingrese Email'

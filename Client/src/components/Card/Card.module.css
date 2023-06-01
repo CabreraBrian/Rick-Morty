@@ -1,8 +1,8 @@
 .contenedor {
     width: 12em;
-    box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 7px 3px rgb(68, 255, 0);
+    -webkit-box-shadow: 0px 0px 7px 3px rgb(68, 255, 0);
+    -moz-box-shadow: 0px 0px 7px 3px rgb(68, 255, 0);
     padding: 10px;
     margin: 5px;
     background-image: url("../assets/cardBg.jpg");
@@ -13,12 +13,18 @@
     flex-direction: column;
     transition: 0.2s;
 }
+.contenedor:hover{
+    width: 13em;
+    box-shadow: 0px 0px 7px 3px rgb(255, 0, 0);
+    -webkit-box-shadow: 0px 0px 7px 3px rgb(255, 0, 0);
+    -moz-box-shadow: 0px 0px 7px 3px rgb(255, 0, 0);
+}
 
 .titulo{
     border: 1px solid black;
     padding-left: 10px;
     background-color: #F7F352;
-    height: 2em;
+    height: 15%;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -62,7 +68,7 @@
 .text{
     border:  1px solid black;
     display: flex;
-    height: 2em;
+    height: 15%;
     width: 100%;
     background-color: #F7F352;
     border-bottom-left-radius: 15px;
