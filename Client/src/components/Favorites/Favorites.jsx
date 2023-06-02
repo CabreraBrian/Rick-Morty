@@ -2,16 +2,16 @@ import style from "./Favorites.module.css";
 import Card from "../Card/Card";
 import { connect, useDispatch } from "react-redux";
 import { filterCards, orderCards } from "../../Redux/action";
-import { useState } from "react";
+// import { useState } from "react";
 
 const Favorites = ({ myFavorites }) => {
-  const [aux, setAux] = useState(false);
+  // const [aux, setAux] = useState(false);
 
   const dispatch = useDispatch();
 
   const handleOrder = (event) => {
     dispatch(orderCards(event.target.value));
-    setAux(true);
+    // setAux(true);
   };
 
   const handleFilter = (event) => {

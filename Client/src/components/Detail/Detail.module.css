@@ -1,22 +1,25 @@
 video{
+    top: 0;
     left: 0;
     position: fixed;
     width: 100%;
-    height: 93.6vh;
+    height: 100%;
     object-fit: cover;
 }
 
 .contenedor{
+    top: 0;
+    left: 0;
     position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 93.6vh;
+    height: 100%;
     width: 100%;
 }
 
 .imagen img{
-    width: 70%;
+    width: 60%;
     border-radius: 100%;
 }
 
@@ -46,4 +49,14 @@ video{
 
 .datos h3{
     font-size: 25px;
+}
+
+.botonH{
+    border: 2px solid;
+    padding: 5px;
+    /* font-family:'Courier New', Courier, monospace; */
+    font-weight: 900;
+    background-color: rgb(43, 255, 0);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }

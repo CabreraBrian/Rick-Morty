@@ -1,14 +1,3 @@
-
-.contenedor{
-    height: 100vh;
-    background: url("../assets/fondoForm.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-
-}
-
 .formulario {
     border-radius: 15px;
     padding: 10px;
@@ -43,3 +32,15 @@ margin: 0%;
     font-size: medium;
     color:red
 }
+
+@media screen and (max-width: 650px) {
+    .formulario {
+        width: 90%;
+    }
+
+    .formulario img{
+        width: 90%;
+    }
+    
+
+ }

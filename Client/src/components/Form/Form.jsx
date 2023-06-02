@@ -24,7 +24,6 @@ const Forms = ({ login }) => {
   };
 
   return (
-    <div className={style.contenedor}>
       <div className={style.formulario}>
         <img src={logo} alt="" />
         <form>
@@ -61,7 +60,6 @@ const Forms = ({ login }) => {
           </button>
         </form>
       </div>
-    </div>
   );
 };
 

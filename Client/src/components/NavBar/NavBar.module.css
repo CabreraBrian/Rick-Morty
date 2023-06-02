@@ -11,7 +11,11 @@
   background-color: rgba(0, 0, 0, 0.856);
 }
 
-.nav img {
+.logoHome {
+  left: 1px;
+  height: 90%;
+}
+.logo {
   left: 1px;
   height: 90%;
 }
@@ -70,10 +74,13 @@
 
 @media screen and (max-width: 650px) {
   .nav {
-    padding: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    justify-content: space-around;
   }
 
-  .nav img {
+  .logoHome {
     width: 0px;
+    
   }
 }

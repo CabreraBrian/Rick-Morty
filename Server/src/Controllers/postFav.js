@@ -6,11 +6,7 @@ const postFav = async (req, res)=>{
 
         if(!id || !name || !origin || !status || !image || !species || !gender) return res.status(401).send('Faltan datos');
 
-        await Favorite.findOrCreate({
-            where: {
-                id, name, origin, status, image, species, gender
-            }
-        });
+        await Favorite.findOrCreate({ where: {id, name, origin, status, image, species, gender}});
         const allFavorites = await Favorite.findAll()
         return res.status(200).json(allFavorites)
 

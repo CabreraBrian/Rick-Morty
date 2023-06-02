@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import style from "./Detail.module.css";
 import videoBg from "../assets/videoBg.mp4";
 
@@ -34,6 +34,9 @@ const Detail = () => {
           <h3>Species: {character.species && character.species}</h3>
           <h3>Gender: {character.gender && character.gender}</h3>
           <h3>Origins: {character.origin?.name && character.origin?.name}</h3>
+          <Link to="/home">
+          <button className={style.botonH}>Regresar🏠</button>
+          </Link>
         </div>
       </div>
     </div>

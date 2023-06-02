@@ -5,8 +5,3 @@
     justify-content:space-around;
 }
 
-@media screen and (max-width: 700px) {
-    .contenedor {
-        justify-content: center;
-    }    
-}
