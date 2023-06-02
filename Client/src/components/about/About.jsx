@@ -3,7 +3,6 @@ import yo from "../assets/yo.png.jpg";
 
 const About = () => {
   return (
-    
     <div className={style.about}> 
      <h1>Aplicacion creada por Brian Ezequiel Cabrera</h1>
      <h2>No se que mas poner aca jaja</h2>

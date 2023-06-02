@@ -57,7 +57,6 @@ function App() {
   return (
     <div className="App">
       {pathname !== "/" && <NavBar onSearch={onSearch} />}
-
       <Routes>
         <Route path="/" element={<Forms login={login} />} />
         <Route

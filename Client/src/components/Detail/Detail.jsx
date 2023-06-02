@@ -35,7 +35,10 @@ const Detail = () => {
           <h3>Gender: {character.gender && character.gender}</h3>
           <h3>Origins: {character.origin?.name && character.origin?.name}</h3>
           <Link to="/home">
-          <button className={style.botonH}>Regresar🏠</button>
+          <button className={style.botonH}>Home🏠</button>
+          </Link>
+          <Link to="/favorites">
+          <button className={style.botonH}>Favoritos❤️</button>
           </Link>
         </div>
       </div>
