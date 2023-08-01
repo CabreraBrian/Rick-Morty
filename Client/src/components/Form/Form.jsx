@@ -2,6 +2,7 @@ import { useState } from "react";
 import validation from "./validation";
 import style from "./Form.module.css";
 import logo from "../assets/logo2.png";
+import formBg from "../assets/fondoForm.png"
 
 const Forms = ({ login }) => {
   const [userData, setUserData] = useState({
@@ -24,9 +25,11 @@ const Forms = ({ login }) => {
   };
 
   return (
-      <div className={style.formulario}>
-        <img src={logo} alt="" />
-        <form>
+
+      <div>
+      <img className={style.bg} src={formBg}></img>
+        <form className={style.formulario}>
+          <img src={logo} alt="" />
           <div className={style.input}>
             <label htmlFor="email">Email: </label>
             <input

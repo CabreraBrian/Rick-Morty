@@ -1,11 +1,11 @@
 const data = (data) => {
     let  errors = {};
 
-    if(!data.email.includes('@')){
-        errors.e1 = 'Email no valido';
-    }
     if(!data.email){
-        errors.e2 = 'Ingrese Email'
+        errors.e1 = 'Ingrese Email'
+    }
+    if(!data.email.includes('@')){
+        errors.e2 = 'Email no valido';
     }
     if(data.email.length > 35){
         errors.e3 = 'Menos de 35 caracteres'

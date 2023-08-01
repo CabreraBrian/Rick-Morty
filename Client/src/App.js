@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Cards from "./components/Cards/Cards.jsx";
-import About from "./components/about/About.jsx";
+import About from "./components/About/About.jsx";
 import Forms from "./components/Form/Form.jsx";
 import axios from "axios";
 import Favorites from "./components/Favorites/Favorites.jsx";
@@ -33,17 +33,19 @@ function App() {
     !access && navigate("/");
   }, [access]);
 
-  async function onSearch(id) {
+  const onSearch = async (id) => {
     try {
+      let idN = Number(id)
+      const charactersFinded = characters
+      if (charactersFinded.some(char => char.id === idN)) return window.alert("Ese personaje ya se busco")
+
       const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`);
       if (data.name) {
         setCharacters((oldChars) => [...oldChars, data])
-      } else {
-        window.alert("¡No hay personajes con este ID!"); 
       }
-      } catch (error) {
-        console.log(error);
-      }
+    } catch (error) {
+      window.alert("¡No hay personajes con este ID!"); 
+    }
   }
 
   const onClose = (id) => {
@@ -59,10 +61,7 @@ function App() {
       {pathname !== "/" && <NavBar onSearch={onSearch} />}
       <Routes>
         <Route path="/" element={<Forms login={login} />} />
-        <Route
-          path="/home"
-          element={<Cards characters={characters} onClose={onClose} />}
-        />
+        <Route path="/home" element={<Cards characters={characters} onClose={onClose} />}/>
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/favorites" element={<Favorites />} />

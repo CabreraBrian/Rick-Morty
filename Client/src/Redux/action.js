@@ -1,5 +1,20 @@
 import axios from "axios";
-import { ADD_FAV, REMOVE_FAV, FILTER, ORDER} from "./action-types";
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, GET_ALLFAVORITES} from "./action-types";
+
+export const getAllFav = () => {
+  try {
+    const endpoint = "http://localhost:3001/rickandmorty/fav";
+    return async (dispatch) => {
+      const { data } = await axios.get(endpoint)
+        return dispatch({
+          type: GET_ALLFAVORITES,
+          payload: data,
+        })
+    }
+  } catch (error) {
+    console.log(error.message);
+  }
+}
 
 export const addFav = (character) => {
   try {

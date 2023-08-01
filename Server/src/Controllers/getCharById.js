@@ -12,7 +12,7 @@ const getCharacterById = async (req, res) => {
       status: data.status,
       name: data.name,
       species: data.species,
-      origin: data. origin,
+      origin: data.origin,
       image: data.image,
       gender: data.gender,
     };

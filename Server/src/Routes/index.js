@@ -4,11 +4,14 @@ const { postFav } = require("../Controllers/postFav");
 const { postUser } = require("../Controllers/postUser")
 const { deleteFav } = require("../Controllers/deleteFav");
 const { getCharacterById } = require("../Controllers/getCharById");
+const { getAllFav } = require("../Controllers/getAllFav")
 
 
 router.get("/login", login);
 
 router.post("/login", postUser);
+
+router.get("/fav", getAllFav)
 
 router.post("/fav", postFav);
 

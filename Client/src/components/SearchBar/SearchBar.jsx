@@ -8,10 +8,15 @@ const SearchBar= ({onSearch}) => {
       setId(event.target.value);
    }
 
+   const handleSubmit = (id) => {
+      onSearch(id)
+      setId("")
+   }
+
    return (
       <div className={style.contenedor}>
          <input type='search' name='input' placeholder="Insertar ID. . ." onChange={handleChange} value={id}></input>
-         <button onClick={()=>{onSearch(id)}} className={style.searchButton}>Agregar</button>
+         <button onClick={()=>{handleSubmit(id)}} className={style.searchButton}>Agregar</button>
       </div>
    );
 }

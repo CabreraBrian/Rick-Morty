@@ -25,7 +25,6 @@ const Card = ({id, name, status, species, gender, origin, image, onClose, addFav
    return (
       <div className={style.contenedor}>
 
-
          <div className={style.titulo}>
             
             <h1>{name}</h1>
